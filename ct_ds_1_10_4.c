@@ -30,18 +30,18 @@ int countInDLL(NODE first) {
 }
 
 NODE insertAtBeginInDLL(NODE first, int x) {
-	NODE temp = first;
 	NODE newNode = createNodeInDLL();
 	newNode->data = x;
 	if (first == NULL){
 		first = newNode;
 		return first;
 	}
-	newNode->next = temp;
-	newNode->prev = first;
-	first = newNode;
+	newNode->next = first;
+    first->prev = newNode;
+    first = newNode;
 	return first;
 }
+
 
 void traverseListInDLL(NODE first) {
 	NODE lastNode = first;
