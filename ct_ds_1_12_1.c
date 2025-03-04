@@ -1,24 +1,25 @@
-// Write complete code here
 #include <stdio.h>
 #include <stdlib.h>
 
 // Node structure
-typedef struct Node {
+struct Node {
     int data;
-    struct Node* next;
-} Node;
+    struct Node *next;
+};
+typedef struct Node *NODE;
 
 // Function to insert at the beginning
-void insert_at_beginning(Node** head, int data) {
-    Node* new_node = (Node*)malloc(sizeof(Node));
+NODE insert_at_beginning(NODE head, int data) {
+    NODE new_node = (NODE)malloc(sizeof(struct Node));
     new_node->data = data;
-    new_node->next = *head;
-    *head = new_node;
+    new_node->next = head;
+    head = new_node;
+    return head;
 }
 
 // Function to display the linked list
-void display(Node* head) {
-    Node* temp = head;
+void display(NODE head) {
+    NODE temp = head;
     printf("Given linked list: ");
     while (temp) {
         printf("%d-->", temp->data);
@@ -28,9 +29,9 @@ void display(Node* head) {
 }
 
 // Function to count occurrences of a key
-int count_occurrences(Node* head, int key) {
+int count_occurrences(NODE head, int key) {
     int count = 0;
-    Node* temp = head;
+    NODE temp = head;
     while (temp) {
         if (temp->data == key) {
             count++;
@@ -43,13 +44,13 @@ int count_occurrences(Node* head, int key) {
 int main() {
     int N, key;
     scanf("%d", &N);
-    Node* head = NULL;
+    NODE head = NULL;
     
     for (int i = 0; i < N; i++) {
         int value;
         scanf("%d", &value);
-        insert_at_beginning(&head, value);
-    }
+        head = insert_at_beginning(head, value);
+    }1
     
     display(head);
     
