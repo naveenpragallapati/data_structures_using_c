@@ -50,7 +50,7 @@ int main() {
         int value;
         scanf("%d", &value);
         head = insert_at_beginning(head, value);
-    }1
+    }
     
     display(head);
     
