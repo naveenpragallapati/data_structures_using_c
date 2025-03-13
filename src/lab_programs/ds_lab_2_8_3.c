@@ -42,7 +42,7 @@ int priority(char x) {
 //If expression contains invalid operators then output will be "Invalid symbols in infix expression. Only alphanumberic and { '+', '-','*', '%%', '/' } are allowed."
 //If the expression contains unbalanced paranthesis the output will be "Invalid infix expression : unbalanced parenthesis."
 void convertInfix(char * e) {
-	char postfix[STACK_MAX_SIZE];
+    char postfix[STACK_MAX_SIZE];
     int i = 0, j = 0, balanced = 0;
 
     while (*e) {
@@ -81,8 +81,13 @@ void convertInfix(char * e) {
         postfix[j++] = pop();
     }
 
+    if (balanced != 0) {
+        printf("Invalid infix expression : unbalanced parenthesis.\n");
+        return;
+    }
+
     postfix[j] = '\0';
-    printf("Postfix expression : %s\n", postfix);	
+    printf("Postfix expression : %s\n", postfix);    
 }
 
 
