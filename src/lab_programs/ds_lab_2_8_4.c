@@ -80,3 +80,5 @@ int main() {
 		}
 	}
 }
+
+// description: This program implements a queue using an array. It provides functions to enqueue, dequeue, display the queue, check if the queue is empty, and get the size of the queue. The main function provides a menu for user interaction.

@@ -99,3 +99,5 @@ int main() {
 		}
 	}
 }
+
+// description: This program implements a queue using a linked list. It provides functions to enqueue, dequeue, check if the queue is empty, get the size of the queue, and display the elements in the queue. The program runs in an infinite loop until the user chooses to exit by entering option 6.

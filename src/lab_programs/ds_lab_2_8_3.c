@@ -100,3 +100,5 @@ int main() {
 	convertInfix(e);
 	return 0;
 }
+
+// description : This program converts an infix expression to postfix notation using a stack. It handles invalid symbols and unbalanced parentheses.

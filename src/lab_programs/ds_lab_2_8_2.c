@@ -93,9 +93,10 @@ int main() {
 				break;
 			case 5:
 				peek();
-				break;
+				break;				
 			case 6: 
 				exit(0);
 		}
 	}
 }
+// description: This program implements a stack using a linked list. It provides operations to push, pop, peek, check if the stack is empty, and display the elements of the stack. The program runs in an infinite loop until the user chooses to exit by entering option 6.

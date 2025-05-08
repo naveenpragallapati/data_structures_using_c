@@ -78,3 +78,4 @@ int main() {
 		}
 	}
 }
+// description: This program implements a stack using an array. It provides functions to push, pop, peek, check if the stack is empty, and display the elements in the stack. The stack has a maximum size of 10 elements. The program runs in an infinite loop until the user chooses to exit by entering option 6.
